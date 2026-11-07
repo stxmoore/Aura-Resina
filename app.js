@@ -70,13 +70,16 @@ function isValidProduct(product) {
         && PRODUCT_CATEGORIES.includes(product.category)
         && typeof product.description === "string"
         && product.description.trim() !== ""
-        && typeof product.price === "number"
-        && Number.isFinite(product.price)
-        && product.price >= 0
+        && (product.price === null
+            || (typeof product.price === "number" && Number.isFinite(product.price) && product.price >= 0))
         && typeof product.image === "string"
         && product.image.trim() !== ""
         && typeof product.imageAlt === "string"
-        && product.imageAlt.trim() !== "";
+        && product.imageAlt.trim() !== ""
+        && Number.isInteger(product.imageWidth)
+        && product.imageWidth > 0
+        && Number.isInteger(product.imageHeight)
+        && product.imageHeight > 0;
 }
 
 function updateEmptyState() {
@@ -112,8 +115,8 @@ function createProductCard(product) {
     const image = document.createElement("img");
     image.src = product.image;
     image.alt = product.imageAlt;
-    image.width = 800;
-    image.height = 600;
+    image.width = product.imageWidth;
+    image.height = product.imageHeight;
     image.loading = "lazy";
 
     const copy = document.createElement("span");
@@ -133,7 +136,9 @@ function createProductCard(product) {
 
     const price = document.createElement("span");
     price.className = "catalog-product-price";
-    price.textContent = CURRENCY_FORMATTER.format(product.price);
+    price.textContent = product.price === null
+        ? "Precio por consultar"
+        : CURRENCY_FORMATTER.format(product.price);
 
     copy.append(category, name, description, price);
     card.append(image, copy);
@@ -203,10 +208,11 @@ function setActiveFilter(filter) {
 
 function updateSelectionSummary() {
     const selectedProducts = products.filter((product) => selectedProductIds.has(product.id));
-    const total = selectedProducts.reduce((sum, product) => sum + product.price, 0);
+    const hasUnknownPrice = selectedProducts.some((product) => product.price === null);
+    const total = selectedProducts.reduce((sum, product) => sum + (product.price ?? 0), 0);
 
     selectionCount.textContent = String(selectedProducts.length);
-    selectionTotal.textContent = CURRENCY_FORMATTER.format(total);
+    selectionTotal.textContent = hasUnknownPrice ? "Por confirmar" : CURRENCY_FORMATTER.format(total);
     buySelected.setAttribute("aria-disabled", String(selectedProducts.length === 0));
     buySelected.classList.toggle("is-disabled", selectedProducts.length === 0);
 
@@ -215,13 +221,16 @@ function updateSelectionSummary() {
         return;
     }
 
-    const itemLines = selectedProducts.map(
-        (product) => `- ${product.name}: ${CURRENCY_FORMATTER.format(product.price)}`
-    );
+    const itemLines = selectedProducts.map((product) => {
+        const price = product.price === null
+            ? "precio por confirmar"
+            : CURRENCY_FORMATTER.format(product.price);
+        return `- ${product.name}: ${price}`;
+    });
     const message = [
         "Hola, quiero comprar estas piezas de Aura Resina:",
         ...itemLines,
-        `Total estimado: ${CURRENCY_FORMATTER.format(total)}`
+        `Total estimado: ${hasUnknownPrice ? "pendiente de confirmar" : CURRENCY_FORMATTER.format(total)}`
     ].join("\n");
     buySelected.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }

@@ -408,22 +408,23 @@ a:focus-visible {
     color: #4e3470;
 }
 
-.category-art svg {
-    width: 58%;
-    fill: currentColor;
+.category-photo-frame {
+    display: block;
+    width: 100%;
+    height: clamp(6.5rem, 17vw, 9rem);
+    flex: 0 0 auto;
+    overflow: hidden;
+    margin: 0 0 auto;
+    border: 1px solid rgb(48 33 65 / 10%);
+    border-radius: .65rem;
+    background: #e6def0;
 }
 
-.category-art .svg-cutout {
-    fill: #e6def0;
-}
-
-.category-amethyst .svg-cutout,
-.category-violet .svg-cutout {
-    fill: #c9b6e4;
-}
-
-.category-rose .svg-cutout {
-    fill: #ded4e8;
+.category-photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .category-title {

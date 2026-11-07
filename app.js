@@ -293,44 +293,6 @@ function initializeCatalog() {
     });
 }
 
-function initializePlaceholders() {
-    const reviews = [];
-    const instagramPhotos = [];
-    const reviewsGrid = document.getElementById("reviewsGrid");
-    const instagramGrid = document.getElementById("instagramGrid");
-    const reviewsPlaceholder = document.getElementById("reviewsPlaceholder");
-    const instagramPlaceholder = document.getElementById("instagramPlaceholder");
-
-    reviewsPlaceholder.hidden = reviews.length > 0;
-    reviews.forEach((review) => {
-        const article = document.createElement("article");
-        article.className = "review-card";
-        const quote = document.createElement("blockquote");
-        quote.textContent = review.text;
-        const author = document.createElement("cite");
-        author.textContent = review.author;
-        article.append(quote, author);
-        reviewsGrid.append(article);
-    });
-
-    instagramPlaceholder.hidden = instagramPhotos.length > 0;
-    instagramPhotos.forEach((photo) => {
-        const link = document.createElement("a");
-        link.href = photo.url;
-        link.target = "_blank";
-        link.rel = "noopener noreferrer";
-        const image = document.createElement("img");
-        image.src = photo.image;
-        image.alt = photo.alt;
-        image.width = 640;
-        image.height = 640;
-        image.loading = "lazy";
-        link.append(image);
-        instagramGrid.append(link);
-    });
-}
-
 initializeTheme();
 initializeCatalog();
-initializePlaceholders();
 document.getElementById("currentYear").textContent = String(new Date().getFullYear());

@@ -5,7 +5,7 @@
     "category": "Aretes",
     "description": "Un toque brillante para destacar tu esencia única.",
     "price": 2.5,
-    "image": "./assets/products/luna-dorada.jpg",
+    "image": "./assets/products/luna-dorada.webp",
     "imageAlt": "Aretes de resina en forma de luna con brillo dorado.",
     "imageWidth": 1042,
     "imageHeight": 768
@@ -16,7 +16,7 @@
     "category": "Aretes",
     "description": "Pequeños detalles que iluminan cada momento con encanto.",
     "price": 1.99,
-    "image": "./assets/products/destello-lunar.jpeg",
+    "image": "./assets/products/destello-lunar.webp",
     "imageAlt": "Aretes de resina transparentes con detalles lunares dorados.",
     "imageWidth": 768,
     "imageHeight": 1018
@@ -27,7 +27,7 @@
     "category": "Aretes",
     "description": "Un detalle lleno de color para alegrar tus días.",
     "price": 2.99,
-    "image": "./assets/products/flor-escarlata.jpeg",
+    "image": "./assets/products/flor-escarlata.webp",
     "imageAlt": "Aretes rojos de resina con forma de flor.",
     "imageWidth": 768,
     "imageHeight": 1033
@@ -38,7 +38,7 @@
     "category": "Aretes",
     "description": "Diseño moderno para quienes aman los detalles diferentes.",
     "price": 2.5,
-    "image": "./assets/products/dueto-rosa.jpeg",
+    "image": "./assets/products/dueto-rosa.webp",
     "imageAlt": "Aretes geométricos de resina rosa con cadenas doradas.",
     "imageWidth": 1018,
     "imageHeight": 768
@@ -49,7 +49,7 @@
     "category": "Aretes",
     "description": "La belleza de la naturaleza convertida en un detalle especial.",
     "price": 3.99,
-    "image": "./assets/products/sol-de-primavera.jpeg",
+    "image": "./assets/products/sol-de-primavera.webp",
     "imageAlt": "Aretes largos de resina decorados con girasoles.",
     "imageWidth": 768,
     "imageHeight": 1259
@@ -60,7 +60,7 @@
     "category": "Llaveros",
     "description": "Un toque floral que acompaña tus momentos favoritos.",
     "price": 2.5,
-    "image": "./assets/products/flor-de-ensueno.jpeg",
+    "image": "./assets/products/flor-de-ensueno.webp",
     "imageAlt": "Llavero de resina transparente con una flor anaranjada.",
     "imageWidth": 768,
     "imageHeight": 1018
@@ -71,7 +71,7 @@
     "category": "Llaveros",
     "description": "Lleva contigo un destello de creatividad y originalidad.",
     "price": 2.5,
-    "image": "./assets/products/luna-verde.jpeg",
+    "image": "./assets/products/luna-verde.webp",
     "imageAlt": "Llavero de resina verde en forma de luna creciente.",
     "imageWidth": 768,
     "imageHeight": 1018
@@ -82,7 +82,7 @@
     "category": "Collares",
     "description": "La naturaleza hecha arte para acompañar tu estilo.",
     "price": null,
-    "image": "./assets/products/esencia-natural.jpeg",
+    "image": "./assets/products/esencia-natural.webp",
     "imageAlt": "Collar con dije rectangular de resina y flores pequeñas.",
     "imageWidth": 833,
     "imageHeight": 768
@@ -93,7 +93,7 @@
     "category": "Collares",
     "description": "Flores que conservan su belleza en cada pequeño detalle.",
     "price": 2.5,
-    "image": "./assets/products/encanto-floral.jpeg",
+    "image": "./assets/products/encanto-floral.webp",
     "imageAlt": "Collar dorado con dije de resina transparente y flores.",
     "imageWidth": 858,
     "imageHeight": 768

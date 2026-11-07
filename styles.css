@@ -327,10 +327,9 @@ a:focus-visible {
 
 .about-layout .section-title,
 .section-intro .section-title,
-.reviews-section .section-title,
-.instagram-heading .section-title,
 .closing-section .section-title,
-.custom-section .section-title {
+.custom-section .section-title,
+.faq-section .section-title {
     font-size: clamp(2rem, 4vw, 3.15rem);
 }
 
@@ -491,80 +490,58 @@ a:focus-visible {
     line-height: 1.8;
 }
 
-.reviews-section {
+.faq-section {
     background: var(--aura-white);
 }
 
-.content-placeholder {
-    display: grid;
-    min-height: 8rem;
-    align-content: center;
-    gap: .35rem;
-    margin-top: 1.4rem;
-    padding: 1.5rem;
-    border: 1px dashed #9b8eaa;
-    border-radius: .75rem;
-    background: var(--aura-paper);
+.faq-layout {
+    max-width: 56rem;
+}
+
+.faq-layout .section-title {
+    margin-bottom: 1.5rem;
+}
+
+.faq-list {
+    border-top: 1px solid var(--aura-line);
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--aura-line);
+}
+
+.faq-item summary {
+    position: relative;
+    padding: 1.15rem 2.5rem 1.15rem 0;
+    color: var(--aura-ink);
+    cursor: pointer;
+    font-weight: 700;
+    list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    position: absolute;
+    top: 50%;
+    right: .3rem;
+    color: var(--aura-purple);
+    content: "+";
+    font-size: 1.5rem;
+    font-weight: 500;
+    transform: translateY(-50%);
+}
+
+.faq-item[open] summary::after {
+    content: "\2212";
+}
+
+.faq-item p {
+    max-width: 48rem;
+    margin: -.15rem 2rem 1.25rem 0;
     color: var(--aura-muted);
-}
-
-.content-placeholder p,
-.content-placeholder span {
-    margin: 0;
-}
-
-.content-placeholder span {
-    font-size: .83rem;
-}
-
-.reviews-grid:not(:empty),
-.instagram-grid:not(:empty) {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
-    gap: 1rem;
-    margin-top: 1.4rem;
-}
-
-.review-card {
-    padding: 1.25rem;
-    border: 1px solid var(--aura-line);
-    border-radius: .75rem;
-    background: var(--aura-paper);
-}
-
-.review-card blockquote {
-    margin: 0 0 .7rem;
-}
-
-.review-card cite {
-    color: var(--aura-muted);
-    font-size: .88rem;
-    font-style: normal;
-}
-
-.instagram-section {
-    background: var(--aura-paper);
-}
-
-.instagram-grid a {
-    display: block;
-    overflow: hidden;
-    border-radius: .75rem;
-}
-
-.instagram-grid img {
-    display: block;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1;
-    object-fit: cover;
-}
-
-.instagram-heading {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 1.5rem;
 }
 
 .text-link {
@@ -870,11 +847,6 @@ a:focus-visible {
 
     .category-description {
         font-size: .82rem;
-    }
-
-    .instagram-heading {
-        align-items: flex-start;
-        flex-direction: column;
     }
 
     .catalog-footer {

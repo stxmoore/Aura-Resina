@@ -97,5 +97,38 @@
     "imageAlt": "Collar dorado con dije de resina transparente y flores.",
     "imageWidth": 858,
     "imageHeight": 768
+  },
+  {
+    "id": "jardin-de-cristal",
+    "name": "Jardín de Cristal",
+    "category": "Portavelas",
+    "description": "Flores delicadas y tonos encantadores para iluminar tu espacio.",
+    "price": 6.5,
+    "image": "./assets/products/jardin-de-cristal.webp",
+    "imageAlt": "Portavelas cúbico de resina con flores secas y luz cálida.",
+    "imageWidth": 773,
+    "imageHeight": 768
+  },
+  {
+    "id": "latido-de-primavera",
+    "name": "Latido de Primavera",
+    "category": "Portavelas",
+    "description": "Colores vibrantes que convierten cada rincón en algo especial.",
+    "price": 4.99,
+    "image": "./assets/products/latido-de-primavera.webp",
+    "imageAlt": "Portavelas redondo de resina transparente con flores rojas y una vela encendida.",
+    "imageWidth": 768,
+    "imageHeight": 1018
+  },
+  {
+    "id": "refugio-de-pasion",
+    "name": "Refugio de Pasión",
+    "category": "Portavelas",
+    "description": "Protege tu fuego interior con la delicadeza de lo eterno.",
+    "price": 5.5,
+    "image": "./assets/products/refugio-de-pasion.webp",
+    "imageAlt": "Portavelas de resina con flores secas rojas y una vela encendida.",
+    "imageWidth": 1408,
+    "imageHeight": 768
   }
 ]
